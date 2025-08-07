@@ -3,82 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - NepalNext 2025</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Contact Us - NepalNext</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
+    <header class="custom-header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="logo">NepalNext</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="submit.html">Submit</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="connect.html">Connect</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+            <nav>
+                <ul class="flex items-center space-x-2">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="discover.html" class="nav-link">Discover</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contacts.html" class="nav-link">Contact</a></li>
+                    <li><a href="submit.html" class="btn btn-primary ml-4">Submit an Idea</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Whether you're a young creator with a question, an organization looking to partner, or a member of the press, we'd love to hear from you. Use the form below or reach out directly to our team.</p>
-
-            <!-- Contact Form -->
-            <form action="#" method="POST" style="margin-bottom: 4rem;">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
+    <main class="py-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold text-center mb-12">Our Team</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="card custom-card">
+                    <h2 class="text-3xl font-bold mb-4">Zachary Lewis</h2>
+                    <h3 class="text-xl text-blue-600 font-semibold mb-4">Co-founder</h3>
+                    <p class="text-lg">
+                        Zachary is a dedicated software engineer with a passion for community engagement and youth empowerment. As a full-time software engineer, he brings a wealth of technical expertise to NepalNext. Beyond his professional life, Zachary is a highly engaged political advocate in his local community and a respected youth leader. He has extensive experience working with marginalized youth, special needs children, and in drug prevention initiatives, demonstrating a profound commitment to creating a positive impact on society.
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-
-            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 4rem 0;">
-
-            <!-- Meet the Founders Section -->
-            <h2>Meet the Founders</h2>
-            <p>NepalNext is driven by a unique partnership that bridges professional experience with the voice of the next generation.</p>
-            
-            <div class="discover-grid" style="margin-top: 2rem;">
-                <!-- Zachary Lewis Profile Card -->
-                <div class="discover-card">
-                    <div class="discover-card-content">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 5px;">Zachary Lewis</h3>
-                        <p style="font-weight: 600; color: var(--primary-color);">Co-Founder & Technical Lead</p>
-                        <p>As a full-time software engineer, Zachary provides the architectural backbone for NepalNext. His professional expertise is matched by a deep-seated passion for civic action and community leadership. A fierce advocate for empowering vulnerable populations, Zachary has extensive experience working with marginalized youth, supporting children with special needs, and leading drug prevention initiatives. This blend of technical skill and grassroots dedication ensures NepalNext is not only a robust platform but also one with a strong, ethical, and community-focused mission.</p>
-                    </div>
-                </div>
-
-                <!-- Subham Bhattarai Profile Card -->
-                <div class="discover-card">
-                    <div class="discover-card-content">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 5px;">Subham Bhattarai</h3>
-                        <p style="font-weight: 600; color: var(--primary-color);">Co-Founder & Youth Visionary</p>
-                        <p>Subham represents the very generation NepalNext serves. A brilliant and driven high schooler on an accelerated path through dual study, he embodies the ambition of Nepal's youth. Having worked directly with Zachary as a research intern on a critical study related to mental health and suicide prevention, Subham brings an analytical prowess and maturity far beyond his years. He ensures that NepalNext remains authentically connected to the dreams and challenges of young innovators, driving the platform’s vision for future initiatives.</p>
-                    </div>
+                <div class="card custom-card">
+                    <h2 class="text-3xl font-bold mb-4">Subham Bhattarai</h2>
+                    <h3 class="text-xl text-blue-600 font-semibold mb-4">Co-founder</h3>
+                    <p class="text-lg">
+                        Subham is a bright and ambitious high school student on an accelerated academic track, poised to graduate college early through a dual study program. He possesses a keen interest in developing future initiatives and has already demonstrated his research capabilities as an intern under Zachary's mentorship. In this role, he was instrumental in crafting a study on mental health and suicide prevention, showcasing his dedication to addressing critical social issues. Subham's forward-thinking mindset and passion for research make him a vital asset to the NepalNext team.
+                    </p>
                 </div>
             </div>
-
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 NepalNext. Built for the next generation, by the community.</p>
+    <footer class="custom-footer py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 NepalNext. All rights reserved.</p>
         </div>
     </footer>
 </body>

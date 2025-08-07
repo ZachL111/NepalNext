@@ -1,28 +1,54 @@
-<main>
-    <div class="container">
-        <h2>Got Something to Share?</h2>
-        <p>This is your chance. We accept a wide range of digital projects: videos, code repositories, graphic designs, PDFs of your research, animations, music, and more. If you made it, we want to see it.</p>
-        
-        <h3>Submission Guidelines</h3>
-        <ul>
-            <li>You must be between 13-19 years old and of Nepali origin.</li>
-            <li>Your work must be your own. Collaborations are welcome, but give credit!</li>
-            <li>Be respectful. No hate speech or harmful content.</li>
-            <li>Provide a link to your project (YouTube, GitHub, Google Drive, Figma, etc.).</li>
-        </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit an Idea - NepalNext</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="logo">NepalNext</a>
+            <nav>
+                <ul class="flex items-center space-x-2">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="discover.html" class="nav-link">Discover</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contacts.html" class="nav-link">Contact</a></li>
+                    <li><a href="submit.html" class="btn btn-primary ml-4">Submit an Idea</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <br>
-        <h3>Ready? Let's Go.</h3>
-        <p>We use a Google Form to handle submissions securely. It allows you to upload files and provide all the necessary details. Our team will review every submission and feature the best ones on the Discover page.</p>
-        
-        <!-- 
-          IMPORTANT: You will need to create a Google Form and paste its public link here.
-          1. Go to forms.google.com
-          2. Create a new form with fields for: Name, Age, Email, Project Title, Project Description, Project Link, and a File Upload field.
-          3. Click the "Send" button in the top right.
-          4. Go to the "Link" tab and copy the URL.
-          5. Paste that URL into the href="" attribute below.
-        -->
-        <a href="YOUR_GOOGLE_FORM_LINK_HERE" class="btn" target="_blank">Go to Submission Form</a>
-    </div>
-</main>
+    <main class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4">Share Your Vision for Nepal</h1>
+            <p class="text-xl text-gray-600 mb-8">
+                Do you have an idea that could change the future of Nepal? We want to hear it.
+                <br>
+                Click the button below to fill out our submission form.
+            </p>
+            <div class="card custom-card">
+                <h2 class="text-2xl font-bold mb-4">Ready to make a difference?</h2>
+                <p class="text-lg mb-8">
+                    Please prepare your submission in one of the accepted formats (PDF, video, slideshow, etc.) and then proceed to our Google Form to submit your details and upload your file.
+                </p>
+                <a href="#" class="btn btn-primary">
+                    Go to Submission Form
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="custom-footer py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 NepalNext. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

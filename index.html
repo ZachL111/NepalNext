@@ -3,41 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NepalNext 2025: The Future is Yours</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>NepalNext</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
+    <header class="custom-header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="logo">NepalNext</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="manifesto.html">Manifesto</a></li>
-                    <li><a href="submit.html">Submit</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="connect.html">Connect</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav>
+                <ul class="flex items-center space-x-2">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="discover.html" class="nav-link">Discover</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contacts.html" class="nav-link">Contact</a></li>
+                    <li><a href="submit.html" class="btn btn-primary ml-4">Submit an Idea</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Your Vision, Amplified.</h1>
-                <p>You are the next generation of creators, coders, artists, and builders in Nepal. This is your platform. Show the world what you're making.</p>
-                <a href="submit.html" class="btn">Submit Your Project</a>
+        <section id="hero" class="hero-section text-center py-20">
+            <div class="container mx-auto">
+                <h1 class="text-5xl font-bold mb-4 text-white">Welcome to NepalNext</h1>
+                <p class="text-xl mb-8 text-gray-300">Your journey to the future starts here.</p>
+                <a href="submit.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </section>
+
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Our Focus</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card custom-card">
+                        <h3 class="text-2xl font-bold mb-4">Youth Empowerment</h3>
+                        <p>We provide a platform for the youth of Nepal to voice their innovative ideas and bring them to the forefront.</p>
+                    </div>
+                    <div class="card custom-card">
+                        <h3 class="text-2xl font-bold mb-4">Bridging the Gap</h3>
+                        <p>We connect young visionaries with leaders in government and corporations to make a real impact.</p>
+                    </div>
+                    <div class="card custom-card">
+                        <h3 class="text-2xl font-bold mb-4">National Development</h3>
+                        <p>Our mission is to foster a culture of innovation that contributes to the development and prosperity of Nepal.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 NepalNext. Built for the next generation, by the community.</p>
+    <footer class="custom-footer py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 NepalNext. All rights reserved.</p>
         </div>
     </footer>
 </body>

@@ -1,46 +1,49 @@
-<main>
-    <div class="container">
-        <h2>The Showcase</h2>
-        <p>Explore the incredible projects being built by the next generation of Nepal. This is a living gallery of their creativity and ambition.</p>
-        
-        <div class="discover-grid">
-            <!-- Example 1: Video Project -->
-            <div class="discover-card">
-                <div class="discover-card-media">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="discover-card-content">
-                    <h3>Project Karyakram: A Documentary</h3>
-                    <p>A short film exploring the rise of the indie game development scene in Pokhara.</p>
-                    <span class="discover-card-creator">By Anjali Shrestha, Age 18</span>
-                </div>
-            </div>
-
-            <!-- Example 2: PDF/Document Project -->
-            <div class="discover-card">
-                <div class="discover-card-media">
-                    <!-- Use a preview image for the PDF -->
-                    <a href="#"><img src="https://via.placeholder.com/640x360.png?text=PDF+Preview" alt="Preview of a research paper"></a>
-                </div>
-                <div class="discover-card-content">
-                    <h3>Affordable Water Filtration System</h3>
-                    <p>A research paper and prototype design for a low-cost water filter using local materials.</p>
-                    <span class="discover-card-creator">By Bikram Lama, Age 17</span>
-                </div>
-            </div>
-
-            <!-- Example 3: Code/Web Project -->
-            <div class="discover-card">
-                <div class="discover-card-media">
-                    <a href="#"><img src="https://via.placeholder.com/640x360.png?text=App+Screenshot" alt="Screenshot of a mobile app"></a>
-                </div>
-                <div class="discover-card-content">
-                    <h3>Pathshala Helper</h3>
-                    <p>A mobile app that organizes class schedules, notes, and homework for students.</p>
-                    <span class="discover-card-creator">By Rina Maharjan, Age 16</span>
-                </div>
-            </div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - NepalNext</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="logo">NepalNext</a>
+            <nav>
+                <ul class="flex items-center space-x-2">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="discover.html" class="nav-link">Discover</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contacts.html" class="nav-link">Contact</a></li>
+                    <li><a href="submit.html" class="btn btn-primary ml-4">Submit an Idea</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</main>
+    </header>
+
+    <main class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4">Discover Innovative Ideas</h1>
+            <p class="text-xl text-gray-600 mb-8">
+                This is where we will showcase the brilliant submissions from the youth of Nepal.
+                <br>
+                Check back soon to see the amazing ideas that will shape the future of the nation.
+            </p>
+            <div class="card custom-card">
+                <h2 class="text-2xl font-bold">No submissions yet. Be the first to contribute!</h2>
+                <a href="submit.html" class="btn btn-primary mt-6 inline-block">Submit Your Idea</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="custom-footer py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 NepalNext. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

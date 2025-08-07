@@ -3,48 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - NepalNext 2025</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Events - NepalNext</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
+    <header class="custom-header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="logo">NepalNext</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="submit.html">Submit</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="connect.html">Connect</a></li>
-                    <li><a href="events.html" class="active">Events</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav>
+                <ul class="flex items-center space-x-2">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="discover.html" class="nav-link">Discover</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contacts.html" class="nav-link">Contact</a></li>
+                    <li><a href="submit.html" class="btn btn-primary ml-4">Submit an Idea</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="container" style="text-align: center; padding: 60px 20px;">
-            <!-- Using the .hero class from our CSS to get a nice, centered layout -->
-            <section class="hero" style="background: #fff; border-radius: 12px; padding: 50px;">
-                <h2>Events Calendar: Coming Soon</h2>
-                <p style="font-size: 1.2rem; color: var(--light-text);">
-                    We are currently building a curated calendar of workshops, hackathons, and webinars designed to connect and inspire Nepal's next generation of innovators.
-                </p>
-                <p>This will be your central hub for innovation-focused events. Check back soon!</p>
-                
-                <div style="margin-top: 40px;">
-                    <a href="contact.html" class="btn">Partner on an Event</a>
-                </div>
-            </section>
+    <main class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4">Upcoming Events</h1>
+            <p class="text-xl text-gray-600 mb-8">
+                Stay tuned for our future events. We are planning some exciting workshops, seminars, and competitions.
+            </p>
+            <div class="card custom-card">
+                <h2 class="text-2xl font-bold">No upcoming events at this time.</h2>
+                <p class="mt-4 text-lg">Please check back later for updates.</p>
+            </div>
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 NepalNext. Built for the next generation, by the community.</p>
+    <footer class="custom-footer py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 NepalNext. All rights reserved.</p>
         </div>
     </footer>
 </body>
