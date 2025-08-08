@@ -8,11 +8,11 @@
     --bg-dark: #121212;
     --bg-darker: #0a0a0a;
     --text-primary: #ffffff;
-    --text-secondary: #d1d1d1;
+    --text-secondary: #e0e0e0;  /* Lightened from #d1d1d1 */
     --accent-neon: #00ff88;
     --accent-purple: #8b5cf6;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.15);  /* Increased opacity */
+    --glass-border: rgba(255, 255, 255, 0.25);  /* Increased opacity */
     --gradient-1: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(139, 92, 246, 0.15));
 }
 
@@ -22,13 +22,19 @@ body {
     background-image: 
         radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
     color: var(--text-primary);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.02em;
 }
 
 /* Enhanced Header */
@@ -52,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
     font-weight: 500;
     padding: 0.5rem 1rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link::after {
@@ -87,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
@@ -99,13 +106,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Enhanced Glass Card */
 .glass-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 16px;
     border: 1px solid var(--glass-border);
     padding: 2.5rem;
     transition: all 0.4s ease;
     color: var(--text-primary);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .glass-card:hover {
@@ -133,6 +141,18 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     background: var(--gradient-1);
     opacity: 0.1;
+}
+
+.hero-section h1 {
+    animation: fadeDown 1s ease-out;
+}
+
+.hero-section p {
+    animation: fadeUp 1s ease-out 0.3s backwards;
+}
+
+.hero-section .btn-primary {
+    animation: fadeUp 1s ease-out 0.6s backwards;
 }
 
 /* Grid Layouts */
@@ -173,6 +193,26 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Footer Improvements */
 .custom-footer {
     background: var(--bg-darker);
@@ -184,4 +224,5 @@ h1, h2, h3, h4, h5, h6 {
 /* Text Improvements */
 .text-secondary {
     color: var(--text-secondary) !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
