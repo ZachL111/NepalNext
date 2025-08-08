@@ -4,37 +4,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@700&display=swap');
 
 :root {
-    /* Updated Color Palette */
-    --bg-dark: #0a0a0a;
-    --bg-darker: #050505;
+    /* Updated Color Palette for Better Readability */
+    --bg-dark: #121212;
+    --bg-darker: #0a0a0a;
     --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
+    --text-secondary: #d1d1d1;
     --accent-neon: #00ff88;
     --accent-purple: #8b5cf6;
-    --glass-bg: rgba(20, 20, 20, 0.8);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --gradient-1: linear-gradient(135deg, #00ff8855 0%, #8b5cf655 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --gradient-1: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(139, 92, 246, 0.15));
 }
 
-/* Base Styles */
+/* Updated Base Styles */
 body {
     background: var(--bg-dark);
-    background-image: radial-gradient(circle at 50% 0%, var(--accent-neon) 0%, transparent 25%),
-                     radial-gradient(circle at 80% 50%, var(--accent-purple) 0%, transparent 25%);
-    background-attachment: fixed;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+    color: var(--text-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Enhanced Header */
 .custom-header {
-    background: rgba(10, 10, 10, 0.9);
-    backdrop-filter: blur(20px);
+    background: rgba(18, 18, 18, 0.95);
     border-bottom: 1px solid var(--glass-border);
 }
 
@@ -50,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link {
     position: relative;
+    color: var(--text-primary);
     font-weight: 500;
     padding: 0.5rem 1rem;
 }
@@ -66,14 +66,19 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
 }
 
+.nav-link:hover {
+    color: var(--accent-neon);
+}
+
 .nav-link:hover::after {
     width: 80%;
 }
 
 /* Enhanced Buttons */
 .btn-primary {
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(139, 92, 246, 0.2));
     border: 1px solid var(--accent-neon);
+    color: var(--text-primary);
     padding: 0.75rem 2rem;
     border-radius: 8px;
     font-weight: 600;
@@ -82,21 +87,25 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
 .btn-primary:hover {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.3), rgba(139, 92, 246, 0.3));
+    color: var(--accent-neon);
     transform: translateY(-2px);
     box-shadow: 0 0 25px var(--accent-neon);
 }
 
 /* Enhanced Glass Card */
 .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 16px;
     border: 1px solid var(--glass-border);
     padding: 2.5rem;
     transition: all 0.4s ease;
+    color: var(--text-primary);
 }
 
 .glass-card:hover {
@@ -162,4 +171,17 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Footer Improvements */
+.custom-footer {
+    background: var(--bg-darker);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* Text Improvements */
+.text-secondary {
+    color: var(--text-secondary) !important;
 }
