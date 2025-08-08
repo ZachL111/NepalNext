@@ -4,67 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@700&display=swap');
 
 :root {
-    /* Dark Mode Colors (default) */
-    --bg-dark: #0a0b1e;
-    --bg-darker: #050714;
+    /* Updated Color Palette for Better Readability */
+    --bg-dark: #121212;
+    --bg-darker: #0a0a0a;
     --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --accent-blue: #00b4ff;
-    --accent-red: #ff3366;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --gradient-1: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-blue) 100%);
-}
-
-/* Light Mode Colors */
-[data-theme="light"] {
-    --bg-dark: #ffffff;
-    --bg-darker: #f0f2f5;
-    --text-primary: #1a1a1a;
-    --text-secondary: #4a4a4a;
-    --glass-bg: rgba(0, 0, 0, 0.05);
-    --glass-border: rgba(0, 0, 0, 0.1);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: var(--gradient-1);
-    border: none;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    cursor: pointer;
-    z-index: 1000;
-    box-shadow: 0 0 20px rgba(0, 180, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.1);
-}
-
-/* Logo Space */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.logo-image {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
-.logo {
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: 700;
+    --text-secondary: #e0e0e0;  /* Lightened from #d1d1d1 */
+    --accent-neon: #00ff88;
+    --accent-purple: #8b5cf6;
+    --glass-bg: rgba(255, 255, 255, 0.15);  /* Increased opacity */
+    --glass-border: rgba(255, 255, 255, 0.25);  /* Increased opacity */
+    --gradient-1: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(139, 92, 246, 0.15));
 }
 
 /* Updated Base Styles */
@@ -94,6 +43,16 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid var(--glass-border);
 }
 
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(to right, var(--accent-neon), var(--accent-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
 .nav-link {
     position: relative;
     color: var(--text-primary);
@@ -109,22 +68,23 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--gradient-1);
+    background: var(--accent-neon);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 
 .nav-link:hover {
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--accent-neon);
 }
 
-/* Updated Button Styling */
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Enhanced Buttons */
 .btn-primary {
-    background: var(--gradient-1);
-    border: none;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(139, 92, 246, 0.2));
+    border: 1px solid var(--accent-neon);
     color: var(--text-primary);
     padding: 0.75rem 2rem;
     border-radius: 8px;
@@ -134,24 +94,32 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.3), rgba(139, 92, 246, 0.3));
+    color: var(--accent-neon);
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(0, 180, 255, 0.4);
+    box-shadow: 0 0 25px var(--accent-neon);
 }
 
-/* Updated Glass Card */
+/* Enhanced Glass Card */
 .glass-card {
-    background: var(--glass-bg);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
+    border-radius: 16px;
     border: 1px solid var(--glass-border);
+    padding: 2.5rem;
     transition: all 0.4s ease;
+    color: var(--text-primary);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .glass-card:hover {
-    border-image: var(--gradient-1) 1;
-    box-shadow: 0 20px 40px rgba(0, 180, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-neon);
 }
 
 /* Hero Section Enhancement */

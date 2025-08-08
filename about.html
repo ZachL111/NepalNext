@@ -52,25 +52,5 @@
             <p>&copy; 2025 NepalNext. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-const themeToggle = document.querySelector('.theme-toggle');
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-function toggleTheme() {
-    document.documentElement.setAttribute('data-theme',
-        document.documentElement.getAttribute('data-theme') === 'light'
-            ? 'dark'
-            : 'light'
-    );
-}
-
-themeToggle.addEventListener('click', toggleTheme);
-
-// Set initial theme based on system preference
-    document.documentElement.setAttribute('data-theme',
-        prefersDarkScheme.matches ? 'dark' : 'light'
-    );
-    </script>
 </body>
 </html>
